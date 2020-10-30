@@ -1,7 +1,7 @@
 import threading
 import socket 
 
-host = '127.0.0.1'
+host = '0.0.0.0'
 
 port = 7777
 
@@ -9,7 +9,7 @@ server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
 server.bind((host,port))
 
-server.listen(1)
+server.listen(5)
 
 clients = []
 nicknames = []
@@ -53,5 +53,5 @@ def receive():
         # Start Handling Thread For Client
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
-print "waiting for data"
+print("waiting for data")
 receive()
