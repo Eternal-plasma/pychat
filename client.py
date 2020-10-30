@@ -4,9 +4,10 @@ import string
 
 # Choosing Nickname
 nickname = input("Choose your nickname: ")
+servip = input("input server ip: ")
 # Connecting To Server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 7777))
+client.connect((servip, 7777))
 
 # Listening to Server and Sending Nickname
 def receive():
