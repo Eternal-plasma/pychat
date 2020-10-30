@@ -1,2 +1,2 @@
 # pychat
-A simple tcp chat server and client running on port 7777
+A simple tcp chat server and client running on port 7777 !python 3
